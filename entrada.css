@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: #fff0f7;
+}
+
+
+.tela-entrada {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url("img.principal.png") center center / cover no-repeat;
+}
+
+.conteudo-entrada {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px 90px;
+}
+
+.imagem-entrada {
+    display: none;
+}
+
+.botao-comecar {
+    position: relative;
+    z-index: 2;
+}
+
+.creditos {
+    position: absolute;
+    z-index: 2;
+    bottom: 18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.botao-comecar {
+  padding: 18px 42px;
+  border: 3px solid white;
+  border-radius: 22px;
+  background: #d94b91;
+  color: white;
+  box-shadow: 0 8px 0 #b52f75, 0 12px 25px #b52f7533;
+  font: inherit;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.botao-comecar span {
+  margin-left: 8px;
+}
+
+.botao-comecar:hover {
+  transform: translateY(-3px);
+  background: #b52f75;
+}
+
+.creditos {
+  position: absolute;
+  right: 15px;
+  bottom: 18px;
+  left: 15px;
+  color: #a43b70;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+body.entrando-no-mundo .conteudo-entrada {
+  transform: scale(1.08);
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+@media (max-width: 600px) {
+  .conteudo-entrada {
+    min-height: 70vh;
+  }
+
+  .botao-comecar {
+    padding: 16px 32px;
+  }
+}
+
+.imagem-entrada {
+    display: block;
+    width: 300px;
+    max-width: 80%;
+    max-height: 40vh;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}

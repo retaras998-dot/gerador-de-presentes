@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Presentes | Carla Taras</title>
+<link rel="stylesheet" href="entrada.css">
+</head>
+<body>
+
+    <main class="tela-entrada">
+        <div class="conteudo-entrada">
+            <button class="botao-comecar" id="botaoComecar">
+    COMEÇAR <span>✿</span>
+</button>
+        </div>
+
+        <div class="creditos">FEITO COM ♡ POR CARLA TARAS</div>
+    </main>
+<script>
+document.getElementById("botaoComecar").addEventListener("click", function () {
+    document.body.classList.add("entrando-no-mundo");
+
+    setTimeout(() => {
+        window.location.href = "game.html";
+    }, 800);
+});
+</script>
+</body>
+</html>

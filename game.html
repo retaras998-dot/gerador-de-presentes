@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Presentes | Carla Taras</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body class="pagina-ateliê">
+
+  <main class="personalizador">
+
+    <!-- LADO ESQUERDO: ESCOLHAS -->
+    <section class="painel escolhas">
+      <h1>🌸 Escolha suas flores</h1>
+      <div id="listaFlores" class="lista-flores"></div>
+
+      <div class="secao-escolha">
+        <h2>🎀 Escolha a embalagem</h2>
+        <div id="opcoesEmbalagem" class="opcoes"></div>
+      </div>
+
+      <div class="secao-escolha">
+        <h2>🩷 Escolha o papel</h2>
+        <div id="opcoesPapel" class="opcoes opcoes-papel"></div>
+      </div>
+
+      <div class="secao-escolha">
+        <h2>🦋 Adicione enfeites</h2>
+
+        <div class="linha-escolha">
+          <div>
+            <strong>Borboletas</strong>
+            <small>R$ 2,50 cada</small>
+          </div>
+          <div class="controle">
+            <button type="button" data-menos-borboletas>−</button>
+            <span id="qtdBorboletas">0</span>
+            <button type="button" data-mais-borboletas>+</button>
+          </div>
+        </div>
+
+        <div id="opcoesAdicionais" class="opcoes"></div>
+        <p class="observacao">
+          Coroa, ursinhos, LED e laços: preço a confirmar.
+        </p>
+      </div>
+
+      <div class="secao-escolha">
+        <h2>💌 Personalize seu presente</h2>
+
+        <label for="mensagem">Mensagem para acompanhar o buquê</label>
+        <textarea id="mensagem" maxlength="180"
+          placeholder="Escreva sua mensagem aqui..."></textarea>
+
+        <small class="contador"><span id="caracteres">0</span>/180 caracteres</small>
+
+        <label for="foto" class="rotulo-foto">Foto para personalizar (opcional)</label>
+        <input type="file" id="foto" accept="image/*">
+        <small id="nomeFoto">Nenhuma foto selecionada.</small>
+      </div>
+    </section>
+
+    <!-- LADO DIREITO: RESUMO -->
+    <aside class="painel resumo">
+      <div class="decoracao">FEITO COM AMOR ♡</div>
+      <div class="icone-buque">💐</div>
+
+      <h2 class="titulo-resumo">Seu buquê dos sonhos</h2>
+      <p class="subtitulo">Confira suas escolhas!</p>
+
+      <div id="resumoFlores" class="resumo-flores">
+        Nenhuma flor selecionada ainda.
+      </div>
+
+      <div class="resumo-item">
+        <span>Embalagem</span>
+        <strong id="resumoEmbalagem">Normal</strong>
+      </div>
+
+      <div class="resumo-item">
+        <span>Papel</span>
+        <strong id="resumoPapel">Rosa claro</strong>
+      </div>
+
+      <div class="resumo-item">
+        <span>Borboletas</span>
+        <strong id="resumoBorboletas">0</strong>
+      </div>
+
+      <div class="resumo-item">
+        <span>Adicionais</span>
+        <strong id="resumoAdicionais">Nenhum</strong>
+      </div>
+
+      <div class="mensagem-resumo">
+        <h3>💌 Sua mensagem</h3>
+        <p id="resumoMensagem">Sua mensagem aparecerá aqui.</p>
+      </div>
+
+      <div class="precos">
+        <div class="resumo-item">
+          <span>Flores</span>
+          <strong id="valorFlores">R$ 0,00</strong>
+        </div>
+
+        <div class="resumo-item">
+          <span>Embalagem</span>
+          <strong id="valorEmbalagem">R$ 10,00</strong>
+        </div>
+
+        <div class="resumo-item">
+          <span>Borboletas</span>
+          <strong id="valorBorboletas">R$ 0,00</strong>
+        </div>
+
+        <div class="resumo-item">
+          <span>Taxa fixa</span>
+          <strong id="valorTaxa">R$ 20,00</strong>
+        </div>
+      </div>
+
+      <div class="total-final">
+        <span>TOTAL DO PEDIDO</span>
+        <strong id="precoTotal">R$ 30,00</strong>
+      </div>
+
+      <p class="aviso">
+        * Coroa, ursinhos, LED e laços não estão incluídos no total.
+        Confirme esses valores antes de fechar o pedido.
+      </p>
+
+      <button type="button" id="finalizar" class="botao-finalizar">
+        PREPARAR MEU PEDIDO ♡
+      </button>
+
+      <p class="rodape">Criado com carinho por Carla Taras 🌷</p>
+    </aside>
+
+<section class="secao-catalogo">
+  <div class="catalogo-decoracao">✿ ── ♡ ── ✿</div>
+
+  <h2>Ou se quiser um buquê já pronto...</h2>
+
+  <p>
+    Escolha um modelo do meu catálogo e encontre o presente
+    perfeito para surpreender alguém especial! 🌷
+  </p>
+
+  <a
+    href="https://wa.me/c/554284328377"
+    class="botao-catalogo"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+
+  <a
+    href="https://wa.me/c/554284328377"
+    class="botao-catalogo"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    VER CATÁLOGO ♡
+  </a>
+</section>
+
+</body>
+</html>

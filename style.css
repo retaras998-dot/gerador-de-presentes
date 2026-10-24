@@ -1,0 +1,391 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+:root {
+  --rosa: #d94b91;
+  --rosa-escuro: #b52f75;
+  --rosa-claro: #fbe0ed;
+  --fundo: #fff5fa;
+  --texto: #713451;
+  --borda: #f2c5dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.pagina-ateliê {
+  margin: 0;
+  min-height: 100vh;
+  padding: 28px 16px;
+  background: linear-gradient(135deg, #fff2f8, #ffe4f0);
+  color: var(--texto);
+  font-family: 'Fredoka', sans-serif;
+}
+
+.personalizador {
+  width: min(1250px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.painel {
+  min-width: 0;
+  padding: 26px;
+  border: 2px solid var(--borda);
+  border-radius: 25px;
+  background: #fffafd;
+  box-shadow: 0 12px 35px #c64b8515;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1, .secao-escolha h2, .titulo-resumo, .mensagem-resumo h3 {
+  color: var(--rosa-escuro);
+}
+
+h1 {
+  margin-bottom: 22px;
+  font-size: clamp(25px, 3vw, 34px);
+}
+
+.secao-escolha {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borda);
+}
+
+.secao-escolha h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.lista-flores, .opcoes {
+  display: grid;
+  gap: 10px;
+}
+
+.flor-item, .linha-escolha, .opcao-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: white;
+}
+
+.flor-item strong, .linha-escolha strong {
+  display: block;
+}
+
+.flor-item small, .linha-escolha small {
+  display: block;
+  margin-top: 4px;
+  color: #b45a88;
+}
+
+.controle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.controle span {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.controle button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+  font: inherit;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.controle button:last-child {
+  background: var(--rosa);
+  color: white;
+}
+
+.opcao-card {
+  justify-content: flex-start;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.opcao-card input {
+  accent-color: var(--rosa);
+}
+
+.opcao-card.selecionada {
+  border-color: var(--rosa);
+  background: #fff0f7;
+}
+
+.opcoes-papel {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.opcoes-papel .opcao-card {
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 6px;
+  overflow-wrap: anywhere;
+}
+
+.bolinha-papel {
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: 2px solid #ead6e0;
+  border-radius: 50%;
+}
+
+.observacao, .aviso {
+  color: #95627b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+label[for="mensagem"], .rotulo-foto {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 500;
+}
+
+textarea, input[type="file"] {
+  width: 100%;
+  font: inherit;
+}
+
+textarea {
+  min-height: 90px;
+  padding: 12px;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 1px dashed var(--borda);
+  border-radius: 12px;
+  background: white;
+  font-size: 13px;
+}
+
+.contador, #nomeFoto {
+  display: block;
+  margin-top: 7px;
+  color: #95627b;
+  font-size: 12px;
+}
+
+.resumo {
+  position: sticky;
+  top: 20px;
+}
+
+.decoracao {
+  text-align: center;
+  color: var(--rosa-escuro);
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.icone-buque {
+  margin: 12px 0;
+  text-align: center;
+  font-size: 42px;
+}
+
+.titulo-resumo {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.subtitulo {
+  margin-bottom: 22px;
+  text-align: center;
+  color: #a76787;
+}
+
+.resumo-flores, .mensagem-resumo {
+  margin: 18px 0;
+  padding: 15px;
+  border: 1px solid var(--borda);
+  border-radius: 15px;
+  background: white;
+}
+
+.linha-resumo {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.linha-resumo strong {
+  text-align: right;
+}
+
+.resumo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f4d9e7;
+  font-size: 14px;
+}
+
+.resumo-item strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.mensagem-resumo h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.mensagem-resumo p {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.total-final {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 17px;
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+}
+
+.total-final strong {
+  font-size: 32px;
+}
+
+.botao-finalizar {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 12px;
+  border: none;
+  border-radius: 14px;
+  background: var(--rosa);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.botao-finalizar:hover {
+  transform: translateY(-2px);
+  background: var(--rosa-escuro);
+}
+
+.rodape {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #b36c91;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .personalizador {
+    grid-template-columns: 1fr;
+  }
+
+  .resumo {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  body.pagina-ateliê {
+    padding: 12px 8px;
+  }
+
+  .painel {
+    padding: 17px;
+    border-radius: 19px;
+  }
+
+  .opcoes-papel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flor-item, .linha-escolha {
+    padding: 10px;
+  }
+}
+
+.secao-catalogo {
+  width: min(900px, 100%);
+  margin: 35px auto 10px;
+  padding: 35px 22px;
+  text-align: center;
+  background: #fffafd;
+  border: 2px solid #f2c5dc;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px #c64b8515;
+}
+
+.catalogo-decoracao {
+  color: #d94b91;
+  letter-spacing: 5px;
+  margin-bottom: 14px;
+}
+
+.secao-catalogo h2 {
+  color: #b52f75;
+  font-size: clamp(23px, 4vw, 32px);
+  margin-bottom: 12px;
+}
+
+.secao-catalogo p {
+  max-width: 560px;
+  margin: 0 auto 22px;
+  color: #87536d;
+  line-height: 1.7;
+}
+
+.botao-catalogo {
+  display: inline-block;
+  padding: 15px 28px;
+  background: #d94b91;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 14px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.botao-catalogo:hover {
+  background: #b52f75;
+  transform: translateY(-2px);
+}
